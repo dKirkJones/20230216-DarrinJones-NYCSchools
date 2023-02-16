@@ -18,7 +18,7 @@ object NetworkLayer {
         .build()
         .create(SchoolApiService::class.java)
 
-    val updateApiForSchoolSAT : SchoolSATApiService = Retrofit.Builder()
+    val updateApiForSchoolSAT: SchoolSATApiService = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()

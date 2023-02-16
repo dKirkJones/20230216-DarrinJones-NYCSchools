@@ -2,14 +2,14 @@ package com.djmakes.nycschools.utils
 
 import retrofit2.Response
 
-class SimpleResponse<T> (
+class SimpleResponse<T>(
     val status: Status,
     val data: Response<T>?,
     val exception: Exception?
-    ) {
+) {
 
-    companion object{
-        fun <T> success(data: Response<T>): SimpleResponse<T>{
+    companion object {
+        fun <T> success(data: Response<T>): SimpleResponse<T> {
             return SimpleResponse<T>(
                 status = Status.Success,
                 data = data,
@@ -17,7 +17,7 @@ class SimpleResponse<T> (
             )
         }
 
-        fun <T> failure(exception: Exception): SimpleResponse<T>{
+        fun <T> failure(exception: Exception): SimpleResponse<T> {
             return SimpleResponse(
                 status = Status.Failure,
                 data = null,

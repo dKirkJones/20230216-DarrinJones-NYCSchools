@@ -27,6 +27,7 @@ class SchoolListAdapter(
             listener.onItemClick(schoolList[position])
         }
     }
+
     override fun getItemCount(): Int {
         return schoolList.size
     }

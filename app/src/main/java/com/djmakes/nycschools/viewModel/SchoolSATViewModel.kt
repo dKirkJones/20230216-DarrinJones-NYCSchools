@@ -16,7 +16,8 @@ class SchoolSATViewModel : ViewModel() {
     private val TAG = "SATViewMode"
     private val schoolSATRepo = SchoolSATRepository()
 
-    private val _schoolSATLiveData: MutableLiveData<List<SchoolSAT.SchoolSATInfo?>> = MutableLiveData()
+    private val _schoolSATLiveData: MutableLiveData<List<SchoolSAT.SchoolSATInfo?>> =
+        MutableLiveData()
     val schoolSATLiveData: LiveData<List<SchoolSAT.SchoolSATInfo?>> = _schoolSATLiveData
 
     private val _exceptionLiveData: MutableLiveData<String> = MutableLiveData()
@@ -26,10 +27,10 @@ class SchoolSATViewModel : ViewModel() {
     fun startRefreshSchoolId(schoolId: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val responseForSat = schoolSATRepo.getSchoolById(schoolId)
-            when (responseForSat.status){
+            when (responseForSat.status) {
                 SimpleResponse.Status.Success -> {
                     withContext(Dispatchers.Main) {
-                       _schoolSATLiveData.value = responseForSat.body
+                        _schoolSATLiveData.value = responseForSat.body
                     }
                 }
                 SimpleResponse.Status.Failure -> {

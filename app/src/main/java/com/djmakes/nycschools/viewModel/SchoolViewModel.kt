@@ -25,7 +25,7 @@ class SchoolViewModel : ViewModel() {
     fun getSchools() {
         viewModelScope.launch(Dispatchers.IO) {
             val response = repo.getSchoolFromApi()
-            when (response.status){
+            when (response.status) {
                 SimpleResponse.Status.Success -> {
                     withContext(Dispatchers.Main) {
                         _schoolsLiveData.value = response.body
@@ -39,7 +39,6 @@ class SchoolViewModel : ViewModel() {
             }
         }
     }
-
 
 
 }

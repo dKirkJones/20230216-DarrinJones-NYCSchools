@@ -7,7 +7,7 @@ import com.djmakes.nycschools.utils.SimpleResponse
 
 class SchoolRepository {
 
-    suspend fun getSchoolFromApi() : SimpleResponse<List<School.SchoolInfo>> {
+    suspend fun getSchoolFromApi(): SimpleResponse<List<School.SchoolInfo>> {
         return safeApiCall { NetworkLayer.updateApiForSchool.getSchoolFromAPI() }
     }
 }

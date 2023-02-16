@@ -30,7 +30,7 @@ class SATDetailsActivity : AppCompatActivity() {
         viewModel.startRefreshSchoolId(schoolDbn.toString())
         viewModel.schoolSATLiveData.observe(this) { response ->
             binding.satProgress.isVisible = false
-            if(response.isNotEmpty()){
+            if (response.isNotEmpty()) {
                 binding.satTxSchoolName.text = response[0]?.schoolName
                 binding.satTxTakerCount.text = response[0]?.testTakers
                 binding.satTxMathScore.text = response[0]?.mathScore
@@ -43,6 +43,7 @@ class SATDetailsActivity : AppCompatActivity() {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         }
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {

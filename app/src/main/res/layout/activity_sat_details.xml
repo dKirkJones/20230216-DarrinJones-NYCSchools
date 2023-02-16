@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkg_light_blue"
+    tools:context=".ui.SATDetailsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sat_card_view"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="6dp"
+        android:elevation="8dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/sat_tx_school_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:text="@string/new_york_high_school"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <TextView
+                android:id="@+id/sat_tx_label_taker_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/number_of_test_takers"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/sat_tx_school_name"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/sat_tx_taker_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                android:text="@string/_125_sample"
+                app:layout_constraintTop_toBottomOf="@+id/sat_tx_school_name"
+                app:layout_constraintStart_toEndOf="@+id/sat_tx_label_taker_count"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/sat_tx_label_reading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/average_reading_scores"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/sat_tx_label_taker_count"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/sat_tx_reading_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="6dp"
+                android:textSize="18sp"
+                android:text="@string/sample_356"
+                app:layout_constraintTop_toBottomOf="@+id/sat_tx_label_taker_count"
+                app:layout_constraintStart_toEndOf="@+id/sat_tx_label_taker_count"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/sat_tx_label_math"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textSize="18sp"
+                android:text="@string/average_math_scores"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/sat_tx_reading_score"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/sat_tx_math_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="6dp"
+                android:textSize="18sp"
+                android:text="@string/_404_sample"
+                app:layout_constraintTop_toBottomOf="@+id/sat_tx_reading_score"
+                app:layout_constraintStart_toEndOf="@+id/sat_tx_label_taker_count"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/sat_tx_label_writing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/average_writing_scores"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/sat_tx_math_score"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/sat_tx_writing_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="6dp"
+                android:textSize="18sp"
+                android:text="@string/_366_sample"
+                app:layout_constraintTop_toBottomOf="@+id/sat_tx_math_score"
+                app:layout_constraintStart_toEndOf="@+id/sat_tx_label_taker_count"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ProgressBar
+            android:id="@+id/sat_progress"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+        </ProgressBar>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

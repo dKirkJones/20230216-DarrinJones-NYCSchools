@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">NYC Schools</string>
+    <string name="fake_text">Fake text</string>
+    <string name="view_sat_scores">View SAT Scores</string>
+
+    <string name="sat_tests_taken">Total SAT Tests Taken: </string>
+    <string name="reading_average">Average Reading Score: </string>
+    <string name="writing_average">Average Writing Score: </string>
+    <string name="math_average">Average Math Score: </string>
+
+
+    <string name="school_information">School Information</string>
+    <string name="loading_data">Loading data...</string>
+    <string name="chooser_send_mail">Send mail...</string>
+    <string name="error">ERROR! </string>
+    <string name="error_message">Could not retrieve selected school...</string>
+    <string name="error_message_display">Error retrieving data. Check Network Connection.</string>
+
+
+    <string name="no_sat_reported">This school has not reported any SAT scores for the given year</string>
+    <string name="sample_356">356</string>
+    <string name="average_math_scores">Average Math Scores</string>
+    <string name="_404_sample">404</string>
+    <string name="average_writing_scores">Average Writing Scores</string>
+    <string name="_366_sample">366</string>
+    <string name="average_reading_scores">Average Reading Scores</string>
+    <string name="_125_sample">125</string>
+    <string name="number_of_test_takers">Number of Test Takers</string>
+    <string name="new_york_high_school">New York High School</string>
+    <string name="nyc_schools_info">NYC Schools Info</string>
+    <string name="start">Start</string>
+    <string name="school">School</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="phone">phone</string>
+    <string name="school_list">School List</string>
+    <string name="list_item_new_york_high_school">New York High School</string>
+    <string name="chelsea_union_sq">Chelsea-Union Sq</string>
+    <string name="address_of_school_here">Address of School here</string>
+</resources>
